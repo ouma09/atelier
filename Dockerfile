@@ -10,6 +10,6 @@ RUN mvn package
 
 FROM tomcat:9.0-jre8-alpine
 
-COPY --from=MAVEN /tmp/target/doc*.war $CATALINA_HOME/webapps/doc.war
+COPY --from=MAVEN /tmp/target/test*.war $CATALINA_HOME/webapps/test.war
 
 
